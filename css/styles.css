@@ -4,11 +4,11 @@
 body{
     margin: 10px;
 }
-p {
+/* p {
     margin: 20px;
     padding: 0;
     border: dotted 5px olive;
-}
+} */
 .box::before{
     content: "Hello!";
 }
@@ -17,4 +17,10 @@ p {
     height: 100px;
     background-color: goldenrod;
     display: inline-block;
+}
+.box2 {
+    border: 3px solid tomato;
+    width: 150px;
+    height: 150px;
+    overflow: auto;
 }
