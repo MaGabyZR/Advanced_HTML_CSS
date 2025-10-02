@@ -43,3 +43,21 @@ body{
     height: 150px;
     overflow: auto;
 } */
+.tweet {
+    border: 3px solid lightslategray;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.avatar{
+    width: 5rem;
+    height: 5rem;
+    background-color: goldenrod;
+    float: left;                                    /*to put the p or any other block element next to the avatar.*/
+    margin-right: 0.5rem;                                
+}
+.clear {                                            /*to put the element below*/
+    clear: both;
+}
