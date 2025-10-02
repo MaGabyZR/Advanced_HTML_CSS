@@ -3,7 +3,7 @@
 }
 body{
     margin: 10px;
-    height: 200vh;
+    /* height: 200vh; */
 }
 /* p {
     margin: 20px;
@@ -13,16 +13,33 @@ body{
 .box::before{
     content: "Hello!";
 } */
- .boxes {
+.boxes {
     border: 3px solid gray;
     position: relative;
  }
 .box {
+    flex-basis: 5rem;
+    flex-grow: 1;
+    /* flex-shrink: 1; */
     width: 5rem;                                     /*50% pf the parent, which is body, vw:view width, vh:view hight */
     height: 5rem;
+    background: rgb(115, 115, 189);
+    margin: 1rem;
+}
+.container{
+    border: 3px solid purple;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+/*     flex-wrap: wrap;
+    align-content: center; */
+    height: 90vh;
 }
 .box-one{
-    background: goldenrod;
+    flex-grow: 0;
+    /* flex-basis: 5rem; */
+    /* align-self: flex-start; */
 }
 .box-two{
     background: tomato;
