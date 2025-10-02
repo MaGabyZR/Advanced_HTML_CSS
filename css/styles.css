@@ -3,25 +3,43 @@
 }
 body{
     margin: 10px;
+    height: 200vh;
 }
 /* p {
     margin: 20px;
     padding: 0;
     border: dotted 5px olive;
-} */
-/* .box::before{
+}
+.box::before{
     content: "Hello!";
 } */
+ .boxes {
+    border: 3px solid gray;
+    position: relative;
+ }
 .box {
-    width: 50vw;                                     /*50% pf the parent, which is body, vw:view width, vh:view hight */
-    height: 100vh;
-    background-color: goldenrod;
-    border-top: 3px solid tomato;
-    display: inline-block;
+    width: 5rem;                                     /*50% pf the parent, which is body, vw:view width, vh:view hight */
+    height: 5rem;
 }
-.box2 {
+.box-one{
+    background: goldenrod;
+}
+.box-two{
+    background: tomato;
+    position: fixed;                                /*so this box will always stay on top, even if you scroll down*/
+    top: 0;
+    left: 2rem;
+    right: 2rem;
+    width: auto;                                    /*so the browser decides what width it should give.*/
+    /* bottom: o; */
+    z-index: 999999;
+}
+.box-three{
+    background: deepskyblue;
+}
+/* .box2 {
     border: 3px solid tomato;
     width: 150px;
     height: 150px;
     overflow: auto;
-}
+} */
