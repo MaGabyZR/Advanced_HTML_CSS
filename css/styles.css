@@ -1,6 +1,6 @@
-*, *::before, *::after {
+/* *, *::before, *::after {
     box-sizing: border-box;
-}
+} */
 body{
     margin: 10px;
     /* height: 200vh; */
@@ -13,54 +13,66 @@ body{
 .box::before{
     content: "Hello!";
 } */
-.boxes {
+/* .boxes {
     border: 3px solid gray;
     position: relative;
- }
-.box {
-    flex-basis: 5rem;
-    flex-grow: 1;
-    /* flex-shrink: 1; */
-    width: 5rem;                                     /*50% pf the parent, which is body, vw:view width, vh:view hight */
-    height: 5rem;
-    background: rgb(115, 115, 189);
-    margin: 1rem;
-}
+ } */
 .container{
-    border: 3px solid purple;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-/*     flex-wrap: wrap;
+    display: grid;                                              /*3rows, 2columns*/
+    /* grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(2, 100px); */
+    grid-template: 100px auto 100px / 30fr 70fr;               /*short form for defining the rows and columns */
+    grid-template-areas: 
+        "header  header" 
+        "sidebar main" 
+        "footer  footer";
+/*     row-gap: 10px;
+    column-gap: 10px; */
+    gap: 10px;
+    border: 3px solid gray;
+/*     justify-items: center;
+    align-items: center; */
+/*     justify-content: center;
     align-content: center; */
-    height: 90vh;
+    height: 100vh;
+}
+.box{
+    /* flex-basis: 5rem; */
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /*width: 5rem;                                                50% pf the parent, which is body, vw:view width, vh:view hight */
+    /* height: 5rem; */
+    background: rgb(115, 115, 189);
+    /* margin: 1rem; */
 }
 .box-one{
-    flex-grow: 0;
-    /* flex-basis: 5rem; */
-    /* align-self: flex-start; */
+    /* grid-column: 1 / span 2;                                  replaced by grid-area*/
+    /* grid-row: 2 / span 2; */
+    grid-area: header;
 }
+.box-four{
+    grid-area: footer;
+}
+
+/* 
 .box-two{
     background: tomato;
-    position: fixed;                                /*so this box will always stay on top, even if you scroll down*/
+    position: fixed;                                            /*so this box will always stay on top, even if you scroll down
     top: 0;
     left: 2rem;
     right: 2rem;
-    width: auto;                                    /*so the browser decides what width it should give.*/
-    /* bottom: o; */
+    width: auto;                                                /*so the browser decides what width it should give.
+    bottom: o;
     z-index: 999999;
-}
-.box-three{
-    background: deepskyblue;
-}
+} */
+
 /* .box2 {
     border: 3px solid tomato;
     width: 150px;
     height: 150px;
     overflow: auto;
 } */
-.tweet {
+/* .tweet {
     border: 3px solid lightslategray;
 }
 .clearfix::after{
@@ -72,9 +84,9 @@ body{
     width: 5rem;
     height: 5rem;
     background-color: goldenrod;
-    float: left;                                    /*to put the p or any other block element next to the avatar.*/
+    float: left;                                    /*to put the p or any other block element next to the avatar.
     margin-right: 0.5rem;                                
 }
-.clear {                                            /*to put the element below*/
+.clear {                                            /*to put the element below
     clear: both;
-}
+} */
