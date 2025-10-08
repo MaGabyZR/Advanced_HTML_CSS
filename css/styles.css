@@ -1,10 +1,10 @@
 /* *, *::before, *::after {
     box-sizing: border-box;
 } */
-body{
+/* body{
     margin: 10px;
-    /* height: 200vh; */
-}
+    /* height: 200vh;
+} */
 /* p {
     margin: 20px;
     padding: 0;
@@ -17,7 +17,7 @@ body{
     border: 3px solid gray;
     position: relative;
  } */
-.container{
+/* .container{
     /* display: grid;                                              3rows, 2columns */
     /* grid-template-rows: repeat(3, 100px);
     grid-template-columns: repeat(2, 100px); */
@@ -34,22 +34,22 @@ body{
     align-items: center; */
 /*     justify-content: center;
     align-content: center; */
-    /* height: 100vh; */
-}
-.box{
+    /* height: 100vh;
+} */
+/* .box{
     /* flex-basis: 5rem; */
     /* flex-grow: 1; */
     /* flex-shrink: 1; */
     /*width: 5rem;                                                50% pf the parent, which is body, vw:view width, vh:view hight */
     /* height: 5rem; */
     /* background: rgb(115, 115, 189); */
-    /* margin: 1rem; */
-}
-.box-one{
+    /* margin: 1rem;
+} */
+/* .box-one{
     /* grid-column: 1 / span 2;                                  replaced by grid-area*/
     /* grid-row: 2 / span 2; */
-    /* grid-area: header; */
-}
+    /* grid-area: header;
+} */
 /* .box-four{
     grid-area: footer;
 } */
@@ -91,6 +91,40 @@ body{
     clear: both;
 } */
 
-.first{
+/* .first{
     visibility: hidden;
+} */
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    background: goldenrod;
+    padding: 1rem;
+}
+.box:nth-of-type(2){
+    background: darkslateblue;
+}
+
+@media screen and (min-width: 600px){
+    .container{
+        flex-direction: row;
+    }
+}
+@media screen and (min-width: 900px){
+    .container{
+        flex-direction: row;
+    }
+    .box{
+        background: lightgreen;
+    }
+}
+@media print {
+    body {
+        font-size: 12pt;
+    }
+    .box{
+        padding: 0.5cm;
+    }
 }
