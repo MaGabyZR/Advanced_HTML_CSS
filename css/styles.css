@@ -1,10 +1,18 @@
+@font-face {
+    font-family: 'brush';
+    src: url('fonts/brush/alexbrush-regular-webfont.woff2') format('woff2'),
+         url('fonts/brush/alexbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* *, *::before, *::after {
     box-sizing: border-box;
 } */
 body{
     margin: 10px;
     /* height: 200vh;*/
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "brush", Arial, Helvetica, sans-serif;
 }
 
 h1 {
